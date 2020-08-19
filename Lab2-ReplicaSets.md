@@ -2,7 +2,7 @@
 
 Answer: 1
 ```bash
-master $ kubectl get replicaset
+master $ kubectl get replicasets.apps
 NAME              DESIRED   CURRENT   READY   AGE
 new-replica-set   4         4         0       11s
 ```
@@ -14,12 +14,12 @@ Answer: 4
 
 Answer: busybox777
 ```bash
-master $ kubectl describe replicaset|grep -i image
+master $ kubectl describe replicasets.apps new-replica-set|grep -i image
     Image:      busybox777
 ```
 
 ```bash
-master $ kubectl describe replicaset
+master $ kubectl describe replicasets.apps new-replica-set
 Name:         new-replica-set
 Namespace:    default
 Selector:     name=busybox-pod
@@ -331,6 +331,11 @@ Edit the version from `v1` to `apps/v1`
 master $ kubectl create -f /root/replicaset-definition-1.yaml
 replicaset.apps/replicaset-1 created
 ```
+or
+```bash
+master $ kubectl apply -f replicaset-definition-1.yaml
+replicaset.apps/replicaset-1 created
+```
 
 10. Fix the issue in the replicaset-definition-2.yaml file and create a ReplicaSet using it.
 
@@ -362,8 +367,26 @@ Either delete and re-create the ReplicaSet or Update the existing ReplicSet and 
 master $ kubectl edit replicaset new-replica-set
 replicaset.apps/new-replica-set edited
 ```
+Delete all 4 existing pods
+```bash
+master $ kubectl delete pod new-replica-set-4rb78
+pod "new-replica-set-4rb78" deleted
+master $ kubectl delete pod new-replica-set-9jxcj
+pod "new-replica-set-9jxcj" deleted
+master $ kubectl delete pod new-replica-set-d8dcq
+pod "new-replica-set-d8dcq" deleted
+master $ kubectl delete pod new-replica-set-tp6ck
+pod "new-replica-set-tp6ck" deleted
+```
+13. Now scale the ReplicaSet up to 5 PODs
 
-13. Now scale the ReplicaSet down to 2 PODs
+Use 'kubectl scale' command or edit the replicaset using 'kubectl edit replicaset'
+```bash
+master $ kubectl scale replicaset --replicas=5 new-replica-set
+replicasets.apps/new-replica-set scaled
+```
+14. Now scale the ReplicaSet down to 2 PODs
+
 Use 'kubectl scale' command or edit the replicaset using 'kubectl edit replicaset'
 ```bash
 master $ kubectl edit replicaset new-replica-set
