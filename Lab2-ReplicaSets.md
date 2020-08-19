@@ -11,6 +11,7 @@ new-replica-set   4         4         0       11s
 Answer: 4
 
 3. What is the image used to create the pods in the new-replica-set?
+
 Answer: busybox777
 ```bash
 master $ kubectl describe replicaset|grep -i image
@@ -314,7 +315,9 @@ new-replica-set-tp6ck   0/1     ImagePullBackOff   0          11m
 Answer: ReplicaSet ensures that the desired number of PODs always run.
 
 9. Create a ReplicaSet using the 'replicaset-definition-1.yaml' file located at /root/
+
 Name: replicaset-1
+
 There is an issue with the file, so fix it.
 
 ```bash
@@ -330,7 +333,9 @@ replicaset.apps/replicaset-1 created
 ```
 
 10. Fix the issue in the replicaset-definition-2.yaml file and create a ReplicaSet using it.
+
 Name: replicaset-2
+
 This file is located at /root/
 ```bash
 master $ kubectl create -f /root/replicaset-definition-2.yaml
