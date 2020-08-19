@@ -181,7 +181,7 @@ Failed to pull image "agentx": rpc error: code = Unknown desc = Error response f
 
 10. What does the READY column in the output of the `kubectl get pods` command indicate?
 
-Answer: Number of running containers in pod/Total containers in pod
+Answer: Running containers in pod/Total containers in pod
 
 11. Delete the `webapp` Pod.
 Once deleted, wait for the pod to fully terminate.
@@ -208,5 +208,14 @@ redis           0/1     ErrImagePull   0          9s
 Update the pod-definition file and use `kubectl apply` command or use `kubectl edit pod redis` command.
 ```bash
 master $ kubectl edit pod redis
-
+```
+Edit image name from `redis123` to `redis`
+```bash
+spec:
+ containers:
+ - image: redis
+```
+```bash
+master $ kubectl edit pod redis
+pod/redis edited
 ```
