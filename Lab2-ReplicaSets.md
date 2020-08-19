@@ -366,6 +366,8 @@ replicaset.apps/new-replica-set edited
 13. Now scale the ReplicaSet down to 2 PODs
 Use 'kubectl scale' command or edit the replicaset using 'kubectl edit replicaset'
 ```bash
+master $ kubectl edit replicaset new-replica-set
+replicaset.apps/new-replica-set edited
 master $ kubectl get replicaset
 NAME              DESIRED   CURRENT   READY   AGE
 new-replica-set   2         2         2       16m
