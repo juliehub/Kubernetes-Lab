@@ -20,9 +20,9 @@ newpods-cxv64   1/1     Running   0          18s
 newpods-zvrzc   1/1     Running   0          18s
 nginx           1/1     Running   0          92s
 ```
-4. What is the image used to create the one of the "newpods"?
+4. What is the image used to create the one of the `newpods`?
 
-Answer: busybox
+Answer: `busybox`
 ```bash
 master $ kubectl describe pod newpods-4rtwk
 Name:         newpods-4rtwk
@@ -80,7 +80,7 @@ Events:
 ```
 5. Which nodes are these pods placed on? You must look at all the pods in detail to figure this out
 
-Answer: node01/172.17.0.47
+Answer: `node01/172.17.0.47`
 
 6. How many containers are part of the pod `webapp`? Note: We just created a new POD. Ignore the state of the POD for now.
 
@@ -162,34 +162,34 @@ Events:
   Normal   Pulling    91s (x4 over 3m4s)    kubelet, node01    Pulling image "agentx"
   Warning  Failed     90s (x4 over 3m3s)    kubelet, node01    Error: ErrImagePull
 ```
-7. What images are used in the new 'webapp' pod?
+7. What images are used in the new `webapp` pod?
 You must look at all the pods in detail to figure this out
 
-Answer: nginx and agentx
+Answer: `nginx` and `agentx`
 
-8. What is the state of the container 'agentx' in the pod 'webapp'?
+8. What is the state of the container `agentx` in the pod `webapp`?
 Wait for it to finish the 'ContainerCreating' state
 
 Answer: Error or Waiting
 
-9. Why do you think the container 'agentx' in pod 'webapp' is in error?
+9. Why do you think the container `agentx` in pod `webapp` is in error?
 Try to figure it out from the events section of the pod
 
 Answer: A Docker image with this name doesnt exist on Docker hub
 
 Failed to pull image "agentx": rpc error: code = Unknown desc = Error response from daemon: pull access denied for agentx, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
 
-10. What does the READY column in the output of the 'kubectl get pods' command indicate?
+10. What does the READY column in the output of the `kubectl get pods` command indicate?
 Running containers in pod/Total containers in pod
 
-11. Delete the 'webapp' Pod.
+11. Delete the `webapp` Pod.
 Once deleted, wait for the pod to fully terminate.
 ```bash
 master $ kubectl delete pod webapp
 pod "webapp" deleted
 ```
 
-12. Create a new pod with the name 'redis' and with the image 'redis123'
+12. Create a new pod with the name `redis` and with the image `redis123`
 Use a pod-definition YAML file. And yes the image name is wrong!
 ```bash
 master $ kubectl run redis --image=redis123
@@ -203,8 +203,8 @@ nginx           1/1     Running        0          22m
 redis           0/1     ErrImagePull   0          9s
 ```
 
-13. Now fix the image on the pod to 'redis'.
-Update the pod-definition file and use 'kubectl apply' command or use 'kubectl edit pod redis' command.
+13. Now fix the image on the pod to `redis`.
+Update the pod-definition file and use `kubectl apply` command or use `kubectl edit pod redis` command.
 ```bash
 master $ kubectl edit pod redis
 
