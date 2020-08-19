@@ -180,7 +180,8 @@ Answer: A Docker image with this name doesnt exist on Docker hub
 Failed to pull image "agentx": rpc error: code = Unknown desc = Error response from daemon: pull access denied for agentx, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
 
 10. What does the READY column in the output of the `kubectl get pods` command indicate?
-Running containers in pod/Total containers in pod
+
+Answer: Number of running containers in pod/Total containers in pod
 
 11. Delete the `webapp` Pod.
 Once deleted, wait for the pod to fully terminate.
