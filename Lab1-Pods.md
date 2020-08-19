@@ -94,6 +94,10 @@ master $ kubectl get pods -o wide
 
 Answer: 2
 ```bash
+master $ kubectl get pods webapp
+```
+
+```bash
 master $ kubectl get pods
 NAME            READY   STATUS             RESTARTS   AGE
 newpods-4rtwk   1/1     Running            0          9m41s
@@ -201,7 +205,9 @@ pod "webapp" deleted
 12. Create a new pod with the name `redis` and with the image `redis123`
 Use a pod-definition YAML file. And yes the image name is wrong!
 ```bash
-master $ kubectl run redis --image=redis123
+master $ kubectl run redis --image=redis123 --dry-run=client -o yaml > pod.yaml
+master $ vi pod.yaml
+master $ kubectl apply -f pod.yaml
 pod/redis created
 master $ kubectl get pods
 NAME            READY   STATUS         RESTARTS   AGE
