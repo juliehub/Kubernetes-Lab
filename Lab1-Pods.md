@@ -24,6 +24,10 @@ nginx           1/1     Running   0          92s
 
 Answer: `busybox`
 ```bash
+master $ kubectl describe pod newpods-4rtwk | grep -i image
+```
+
+```bash
 master $ kubectl describe pod newpods-4rtwk
 Name:         newpods-4rtwk
 Namespace:    default
@@ -81,6 +85,10 @@ Events:
 5. Which nodes are these pods placed on? You must look at all the pods in detail to figure this out
 
 Answer: `node01/172.17.0.47`
+To verify pod addresses, enter this command:
+```bash
+master $ kubectl get pods -o wide
+```
 
 6. How many containers are part of the pod `webapp`? Note: We just created a new POD. Ignore the state of the POD for now.
 
