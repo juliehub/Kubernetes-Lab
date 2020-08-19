@@ -347,3 +347,26 @@ master $ vi /root/replicaset-definition-2.yaml
 master $ kubectl create -f /root/replicaset-definition-2.yaml
 replicaset.apps/replicaset-2 created
 ```
+
+11. Delete the two newly created ReplicaSets - replicaset-1 and replicaset-2
+```bash
+master $ kubectl delete replicaset replicaset-1
+replicaset.apps "replicaset-1" deleted
+master $ kubectl delete replicaset replicaset-2
+replicaset.apps "replicaset-2" deleted
+```
+
+12. Fix the original replica set 'new-replica-set' to use the correct 'busybox' image
+Either delete and re-create the ReplicaSet or Update the existing ReplicSet and then delete all PODs, so new ones with the correct image will be created.
+```bash
+master $ kubectl edit replicaset new-replica-set
+replicaset.apps/new-replica-set edited
+```
+
+13. Now scale the ReplicaSet down to 2 PODs
+Use 'kubectl scale' command or edit the replicaset using 'kubectl edit replicaset'
+```bash
+master $ kubectl get replicaset
+NAME              DESIRED   CURRENT   READY   AGE
+new-replica-set   2         2         2       16m
+```
