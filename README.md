@@ -87,6 +87,10 @@ See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-
  $ kubectl get pods --namespace=prod
  $ kubectl get pods --all-namespaces
 ```
+- Create quota
+```bash
+$ kubectl create -f compute-quota.yml
+```
 
 
 
