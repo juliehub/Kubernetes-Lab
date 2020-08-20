@@ -69,7 +69,7 @@ See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes
 - Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
 
 #### Lab 4: NameSpaces
-See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab4-Namespaces.md)
+See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab4-NameSpaces.md)
 ##### Important Commands for lab 4:
 - Download [namespace-dev.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/namespace-dev.yml)
 - Run commands:
