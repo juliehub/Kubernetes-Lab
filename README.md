@@ -1,7 +1,7 @@
 # Kubernetes-Lab
-
-[kubectl CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-[kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/)
+## Tips
+- [kubectl CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/)
 
 ## Basics
 #### Lab 1: PODs
@@ -11,6 +11,7 @@ See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/bl
   - Run commands:
   ```bash
   $ kubectl create -f pod-definition.yml
+  $ kubectl run nginx --image nginx
   $ kubectl get pods
   $ kubectl describe pod newpods-4rtwk 
   $ kubectl get pods -o wide
