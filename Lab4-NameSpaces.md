@@ -15,6 +15,12 @@ marketing         Active   55s
 prod              Active   55s
 research          Active   55s
 ```
+or 
+```bash
+master $ kubectl get ns --no-headers | wc -l
+10
+```
+
 2. How many pods exist in the 'research' namespace?
 
 Answer: 2
@@ -34,6 +40,17 @@ master $ kubectl get pods --namespace=finance
 NAME      READY   STATUS    RESTARTS   AGE
 payroll   1/1     Running   0          4m1s
 redis     1/1     Running   0          12s
+```
+or
+```bash
+master $ kubectl run redis --image=redis --dry-run=client -o yaml> pod.yaml
+```
+Add namespace: finance under metadata
+```bash
+master $ vi pod.yaml
+master $ kubectl apply -f pod.yaml
+pod/redis created
+master $ kubectl -n finance get pods
 ```
 4. Which namespace has the 'blue' pod in it?
 
@@ -70,3 +87,7 @@ What DNS name should the Blue application use to access the database 'db-service
 You can try it in the web application UI. Use port 3306.
 
 Answer: db-service.dev.svc.cluster.local
+
+```bash
+master $ kubectl -n dev svc
+```
