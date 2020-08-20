@@ -22,7 +22,7 @@ See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/bl
 #### Lab 2: ReplicaSet
 See details of this lab via [ReplicaSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab2-ReplicaSets.md)
 ##### Important Commands for lab 2:
-  - Download [replicaset-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/replicaset-definition.yml)
+  - Download [replicaset-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/replicaset-definition.yml) and [compute-quota.yml] (https://github.com/juliehub/Kubernetes-Lab/blob/master/compute-quota.yml)
   - Run commands:
   ```bash
   $ kubectl create -f replicaset-definition.yml
