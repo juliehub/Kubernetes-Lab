@@ -135,3 +135,13 @@ master $ cat <<EOF | kubectl apply -f -
 > EOF
 deployment.apps/httpd-frontend created
 ```
+Another method
+```bash
+master $ kubectl create deployment httpd-frontend --image=httpd:2.4-alpine
+deployment.apps/httpd-frontend created
+master $ kubectl scale deployment --replicas=3
+deployment-1    frontend-deloyment    httpd-frontend
+master $ kubectl scale deloyment --replicas=3 httpd-frontend
+deployment.apps/httpd-frontend scaled
+master $ kubectl get deployments.apps httpd-frontend
+```
