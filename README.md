@@ -103,6 +103,7 @@ $ kubectl create -f service-definition.yml
 $ kubectl get services
 $ kubectl get svc
 $ kubectl expose deployment simple-webapp-deployment --name=webapp-service --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yml > svc.yml
+$ vi svc.yaml
 $ kubectl apply -f svc.yaml
 ```
 - Access the Node port using `curl http://192.168.1.2:30008`
