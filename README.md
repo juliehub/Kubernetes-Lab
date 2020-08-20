@@ -68,7 +68,25 @@ See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes
 
 - Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
 
-
+#### Lab 4: NameSpaces
+See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab4-Namespaces.md)
+##### Important Commands for lab 4:
+- Download [namespace-dev.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/namespace-dev.yml)
+- Run commands:
+ ```bash
+ $ kubectl get pods --namespace=kube-system
+ $ kubectl create -f pod-definition.yml --namespace=dev
+ $ kubectl create namespace dev
+ $ kubectl create -f namespace-dev.yml
+```
+- Swith namespace
+```bash
+ $ kubectl config set-context $(kubect config current-context) --namespace=dev
+ $ kubectl get pods
+ $ kubectl get pods --namespace=default
+ $ kubectl get pods --namespace=prod
+ $ kubectl get pods --all-namespaces
+```
 
 
 
