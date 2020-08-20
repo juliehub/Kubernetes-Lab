@@ -49,7 +49,7 @@ See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes
   $ kubectl get pods
   $ kubectl get all
   ```
-**TIPS**
+##### Tips for lab 3
 - Create an NGINX Pod
 
 `kubectl run --generator=run-pod/v1 nginx --image=nginx`
