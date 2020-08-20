@@ -95,7 +95,7 @@ Events:
 Answer: repository does not exist
 
 7. Create a new Deployment using the 'deployment-definition-1.yaml' file located at /root/.
-There is an issue with the file, so try to fix it. Name: deployment-1
+There is an issue with the file, so try to fix it. `Name: deployment-1`
 ```bash
 master $ kubectl create -f deployment-definition-1.yaml
 Error from server (BadRequest): error when creating "deployment-definition-1.yaml": deployment in version "v1" cannot be handled as a Deployment: no kind "deployment" is registered for version "apps/v1" in scheme "k8s.io/kubernetes/pkg/api/legacyscheme/scheme.go:30"
@@ -107,8 +107,7 @@ master $ kubectl create -f deployment-definition-1.yaml
 deployment.apps/deployment-1 created
 ```
 8. Create a new Deployment with the below attributes using your own deployment definition file
-Name: httpd-frontend; Replicas: 3; Image: httpd:2.4-alpine
-
+`Name: httpd-frontend`; `Replicas: 3`; `Image: httpd:2.4-alpine`
 ```bash
 master $ cat <<EOF | kubectl apply -f -
 > apiVersion: apps/v1
