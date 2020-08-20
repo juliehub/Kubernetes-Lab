@@ -74,12 +74,13 @@ See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-
 - Download [namespace-dev.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/namespace-dev.yml)
 - Run commands:
  ```bash
+ $ kubectl get ns
  $ kubectl get pods --namespace=kube-system
  $ kubectl create -f pod-definition.yml --namespace=dev
  $ kubectl create namespace dev
  $ kubectl create -f namespace-dev.yml
 ```
-- Swith namespace
+- Switch namespace
 ```bash
  $ kubectl config set-context $(kubect config current-context) --namespace=dev
  $ kubectl get pods
@@ -91,6 +92,15 @@ See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-
 ```bash
 $ kubectl create -f compute-quota.yml
 ```
-
-
+#### Lab 5: Services
+See details of this lab via [Services](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab5-Services.md)
+##### Important Commands for lab 5:
+- Download [service-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-definition.yml)
+- Download [service-clusterIP-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-clusterIP-definition.yml)
+- Run commands:
+```bash
+$ kubectl create -f service-definition.yml
+$ kubectl get services
+```
+- Access the Node port using `curl http://192.168.1.2:30008`
 
