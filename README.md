@@ -2,7 +2,6 @@
 ## Tips
 - [kubectl CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/)
-
 ## Basics
 #### Lab 1: PODs
 See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab1-Pods.md)
@@ -50,7 +49,17 @@ See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes
   $ kubectl get pods
   $ kubectl get all
   ```
-
+- Create an NGINX Pod
+`kubectl run --generator=run-pod/v1 nginx --image=nginx`
+- Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
+`kubectl run --generator=run-pod/v1 nginx --image=nginx --dry-run -o yaml`
+- Create a deployment
+`kubectl create deployment --image=nginx nginx`
+- Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
+`kubectl create deployment --image=nginx nginx --dry-run -o yaml`
+- Generate Deployment YAML file (-o yaml). Don't create it(--dry-run) with 4 Replicas (--replicas=4)
+`kubectl create deployment --image=nginx nginx --dry-run -o yaml > nginx-deployment.yaml`
+- Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
 
 
 
