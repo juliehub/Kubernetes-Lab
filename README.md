@@ -7,7 +7,7 @@
 #### Lab 1: PODs
 See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab1-Pods.md)
 ##### Important Commands for lab 1:
-  - Download [pod-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/pod-definition.yml)
+  - Download [pod-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/pod-definition.yaml)
   - Run commands:
   ```bash
   $ kubectl create -f pod-definition.yml
@@ -23,7 +23,7 @@ See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/bl
 #### Lab 2: ReplicaSet
 See details of this lab via [ReplicaSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab2-ReplicaSets.md)
 ##### Important Commands for lab 2:
-  - Download [replicaset-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/replicaset-definition.yml) and [compute-quota.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/compute-quota.yml)
+  - Download [replicaset-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/replicaset-definition.yml) and [compute-quota.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/compute-quota.yml)
   - Run commands:
   ```bash
   $ kubectl create -f replicaset-definition.yml
@@ -41,7 +41,7 @@ See details of this lab via [ReplicaSets](https://github.com/juliehub/Kubernetes
 #### Lab 3: Deployments
 See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab3-Deployments.md)
 ##### Important Commands for lab 3:
-  - Download [deployment-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/deployment-definition.yml)
+  - Download [deployment-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/deployment-definition.yaml)
   - Run commands:
   ```bash
   $ kubectl create -f deployment-definition.yml
@@ -72,7 +72,7 @@ See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes
 #### Lab 4: NameSpaces
 See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab4-NameSpaces.md)
 ##### Important Commands for lab 4:
-- Download [namespace-dev.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/namespace-dev.yml)
+- Download [namespace-dev.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/namespace-dev.yaml)
 - Run commands:
  ```bash
  $ kubectl get ns
@@ -96,8 +96,8 @@ $ kubectl create -f compute-quota.yml
 #### Lab 5: Services
 See details of this lab via [Services](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab5-Services.md)
 ##### Important Commands for lab 5:
-- Download [service-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-definition.yml)
-- Download [service-clusterIP-definition.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-clusterIP-definition.yml)
+- Download [service-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-definition.yaml)
+- Download [service-clusterIP-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-clusterIP-definition.yaml)
 - Run commands:
 ```bash
 $ kubectl create -f service-definition.yml
@@ -111,7 +111,6 @@ $ kubectl apply -f svc.yaml
 #### Lab 6: Imperative Commands
 See details of this lab via [Imperative_Commands](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab6-ImperativeCommands.md)
 ##### Important Commands for lab 6:
-- Download [imperative_cmd.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/imperative_cmd.yml)
 - Imperative Commands
 ```bash
 $ kubectl run --image=nginx nginx
