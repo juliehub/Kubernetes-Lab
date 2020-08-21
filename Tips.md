@@ -1,5 +1,5 @@
 `--dry-run`: By default as soon as the command is run, the resource will be created. 
-If you simply want to test your command, use the --dry-run=client option.
+If you simply want to test your command, use the `--dry-run=client` option.
 This will not create the resource, instead, tell you whether the resource can be created and if your command is right.
 
 `-o yaml`: This will output the resource definition in YAML format on the screen.
@@ -26,6 +26,7 @@ Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
 ```
 **IMPORTANT:**
+
 `kubectl` create deployment does not have a `--replicas` option. You could first create it and then scale it using the `kubectl scale` command.
 
 Save it to a file - (If you need to modify or add some other details)
