@@ -19,18 +19,31 @@ NAME        READY   STATUS              RESTARTS   AGE
 nginx-pod   0/1     ContainerCreating   0          4m35s
 redis       0/1     ContainerCreating   0          5s
 ```
+or
+```bash
+master $ kubectl run redis --image=redis:alpine --labels=tier=db
+```
 3. Create a service redis-service to expose the redis application within the cluster on port 6379. Use imperative commands
 - Service: redis-service
 - Port: 6379
 - Type: ClusterIp
 - Selector: tier=db
 ```bash
-master $ kubectl expose pod redis --port=6379 --name redis-service
+master $ kubectl expose pod redis --name redis-service --port 6379 --target-port 6379
 service/redis-service exposed
-master $ kubectl get svc
-NAME            TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
-kubernetes      ClusterIP   10.96.0.1     <none>        443/TCP    32m
-redis-service   ClusterIP   10.107.52.1   <none>        6379/TCP   22s
+master $ kubectl describe svc redis-service
+Name:              redis-service
+Namespace:         default
+Labels:            tier=db
+Annotations:       <none>
+Selector:          tier=db
+Type:              ClusterIP
+IP:                10.106.136.60
+Port:              <unset>  6379/TCP
+TargetPort:        6379/TCP
+Endpoints:         10.244.1.4:6379
+Session Affinity:  None
+Events:            <none>
 ```
 4. Create a deployment named `webapp` using the image `kodekloud/webapp-color` with `3` replicas.
 Try to use imperative commands only. Do not create definition files.
@@ -46,10 +59,12 @@ master $ kubectl get deployments
 NAME     READY   UP-TO-DATE   AVAILABLE   AGE
 webapp   0/3     3            0           32s
 ```
-Or
-Use the command `kubectl create deployment webapp --image=kodekloud/webapp-color`.
+Or, use the command `kubectl create deployment webapp --image=kodekloud/webapp-color`.
 
 Then scale the webapp to 3 using command `kubectl scale deployment/webapp --replicas=3`
+```bash
+master $ kubectl scale deployment --replicas=3 webapp
+```
 5. Create a new pod called `custom-nginx` using the `nginx` image and expose it on container `port 8080`.
 ```bash
 master $ kubectl run custom-nginx --image=nginx --port=8080
@@ -81,9 +96,9 @@ Edit the YAML file and add update the replicas to 2
 master $ vi deploy.yaml
 master $ kubectl apply -f deploy.yaml
 deployment.apps/redis-deploy created
-master $ kubectl get deployments
-NAME     READY   UP-TO-DATE   AVAILABLE   AGE
-webapp   0/3     3            0           11m
+master $ kubectl get deployments.apps -n dev-ns
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+redis-deploy   2/2     2            2           46s
 ```
 You can also use `kubectl scale deployment` or `kubectl edit deployment` to change the number of replicas once the object has been created.
 
@@ -105,13 +120,14 @@ httpd           ClusterIP   10.99.93.201   <none>        80/TCP     2m19s
 kubernetes      ClusterIP   10.96.0.1      <none>        443/TCP    71m
 redis-service   ClusterIP   10.107.52.1    <none>        6379/TCP   39m
 master $ kubectl get pod
-NAME                      READY   STATUS              RESTARTS   AGE
-custom-nginx              0/1     ContainerCreating   0          32m
-httpd                     0/1     ContainerCreating   0          2m27s
-nginx-pod                 0/1     ContainerCreating   0          48m
-redis                     0/1     ContainerCreating   0          43m
-webapp-7cd5749f95-69cz9   0/1     ContainerCreating   0          34m
-webapp-7cd5749f95-hnw45   0/1     ContainerCreating   0          34m
-webapp-7cd5749f95-snznv   0/1     ContainerCreating   0          34m
+NAME                      READY   STATUS    RESTARTS   AGE
+custom-nginx              1/1     Running   0          20m
+httpd                     1/1     Running   0          43s
+nginx-pod                 1/1     Running   0          28m
+redis                     1/1     Running   0          27m
+webap-5b68cb6dbf-wwt72    1/1     Running   0          21m
+webapp-7cd5749f95-bgw77   1/1     Running   0          20m
+webapp-7cd5749f95-mswpd   1/1     Running   0          20m
+webapp-7cd5749f95-xgbds   1/1     Running   0          20m
 ```
 
