@@ -2,6 +2,7 @@
 ## Tips
 - [kubectl CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/)
+- [review](https://github.com/juliehub/Kubernetes-Lab/blob/master/Tips.md)
 ## Basics
 #### Lab 1: PODs
 See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab1-Pods.md)
@@ -107,4 +108,26 @@ $ vi svc.yaml
 $ kubectl apply -f svc.yaml
 ```
 - Access the Node port using `curl http://192.168.1.2:30008`
-
+#### Lab 6: Imperative Commands
+See details of this lab via [Imperative_Commands](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab6-ImperativeCommands.md)
+##### Important Commands for lab 6:
+- Download [imperative_cmd.yml](https://github.com/juliehub/Kubernetes-Lab/blob/master/imperative_cmd.yml)
+- Imperative Commands
+```bash
+$ kubectl run --image=nginx nginx
+$ kubectl create deployment --image=nginx nginx
+$ kubectl expose deployment nginx --port 80
+$ kubectl edit deployment nginx
+$ kubectl scale deployment nginx --replicas=5
+$ kubectl set image deployment nginx nginx=nginx:1.18
+```
+- Create objects
+```bash
+$ kubectl apply -f nginx.yaml
+$ kubectl apply -f /path/to/config-files
+```
+- Update objects
+```bash
+$ kubectl apply -f nginx.yaml
+$ kubectl apply -f /path/to
+```
