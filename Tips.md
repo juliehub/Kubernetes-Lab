@@ -7,7 +7,7 @@ This will not create the resource, instead, tell you whether the resource can be
 Use the above two in combination to generate a resource definition file quickly,
 that you can then modify and create resources as required, instead of creating the files from scratch.
 
-#### POD
+### POD
 Create an NGINX Pod
 ```bash
 kubectl run nginx --image=nginx
@@ -16,7 +16,7 @@ Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 ```bash
 kubectl run nginx --image=nginx  --dry-run=client -o yaml
 ```
-#### Deployment
+### Deployment
 Create a deployment
 ```bash
 kubectl create deployment --image=nginx nginx
@@ -33,7 +33,7 @@ Save it to a file - (If you need to modify or add some other details)
 kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
 ```
 You can then update the YAML file with the replicas or any other field before creating the deployment.
-#### Service
+### Service
 Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
 ```bash
 kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
