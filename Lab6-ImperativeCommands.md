@@ -91,7 +91,7 @@ You can also use `kubectl scale deployment` or `kubectl edit deployment` to chan
 Next, create a service of type `ClusterIP` by the same name `(httpd)`. 
 The target port for the service should be `80`.
 Try to do this with as **few steps as possible**.
-- `httpd` pod created with the correct image?
+- 'httpd' pod created with the correct image?
 - 'httpd' service is of type 'clusterIP'?
 - 'httpd' service uses correct target port 80?
 - 'httpd' service exposes the 'httpd' pod?
