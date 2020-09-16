@@ -132,3 +132,10 @@ $ kubectl apply -f /path/to
 ```
 #### Lab 7: Manual Scheduling
 See details of this lab via [Manual Scheduling](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab7-ManualScheduling.md)
+
+#### Lab 8: Labels and Selectors
+See details of this lab via [Labels](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab8-Labels.md)
+```bash
+$kubectl get pods --show-labels
+$kubectl get pods -l env=dev
+```
