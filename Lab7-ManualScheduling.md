@@ -20,7 +20,8 @@ nginx   0/1     Pending   0          110s
 controlplane $ kubectl get pods --namespace system
 No resources found in system namespace.
 ```
-3. Manually schedule the pod on node01
+3. Manually schedule the pod on `node01`
+```bash
 controlplane $ kubectl get nodes --show-labels
 NAME           STATUS   ROLES    AGE   VERSION   LABELS
 controlplane   Ready    master   35m   v1.18.0   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=controlplane,kubernetes.io/os=linux,node-role.kubernetes.io/master=
@@ -42,3 +43,4 @@ pod/nginx created
 controlplane $ kubectl get pods
 NAME    READY   STATUS    RESTARTS   AGE
 nginx   1/1     Running   0          18s
+```
