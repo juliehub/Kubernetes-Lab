@@ -130,3 +130,5 @@ $ kubectl apply -f /path/to/config-files
 $ kubectl apply -f nginx.yaml
 $ kubectl apply -f /path/to
 ```
+#### Lab 7: Manual Scheduling
+See details of this lab via [Manual Scheduling](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab7-ManualScheduling.md)
