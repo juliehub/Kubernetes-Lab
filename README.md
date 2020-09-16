@@ -137,5 +137,5 @@ See details of this lab via [Manual Scheduling](https://github.com/juliehub/Kube
 See details of this lab via [Labels](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab8-Labels.md)
 ```bash
 $kubectl get pods --show-labels
-$kubectl get pods -l env=dev
+$kubectl get pods -l env=dev --no-headers | wc -l
 ```
