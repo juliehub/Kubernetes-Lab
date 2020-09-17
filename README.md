@@ -139,3 +139,11 @@ See details of this lab via [Labels](https://github.com/juliehub/Kubernetes-Lab/
 $kubectl get pods --show-labels
 $kubectl get pods -l env=dev --no-headers | wc -l
 ```
+#### Lab 9: Taints and Tolerations
+See details of this lab via [Taints And Tolerations](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab9-TaintsAndTolerations.md)
+```bash
+$ kubectl taint nodes node01 spray=mortein:NoSchedule
+$ kubectl describe node node01 |grep Taints
+$ kubectl taint nodes master node-role.kubernetes.io/master:NoSchedule-
+$ kubectl describe node master|grep Taints
+```
