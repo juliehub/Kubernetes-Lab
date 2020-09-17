@@ -161,3 +161,5 @@ $ vi blue.yaml
 $ kubectl delete deployments.apps blue
 $ kubectl apply -f blue.yaml
 ```
+#### Lab 11: Resource Limit
+See details of this lab via [Resource Limit](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab11-ResourceLimit.md)
