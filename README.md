@@ -147,3 +147,7 @@ $ kubectl describe node node01 |grep Taints
 $ kubectl taint nodes master node-role.kubernetes.io/master:NoSchedule-
 $ kubectl describe node master|grep Taints
 ```
+Grep 5 lines underneath "tolerations"
+```bash
+$ kubectl explain pod --recursive | grep -A5 tolerations
+```
