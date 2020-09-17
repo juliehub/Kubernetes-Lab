@@ -151,3 +151,13 @@ Grep 5 lines underneath "tolerations"
 ```bash
 $ kubectl explain pod --recursive | grep -A5 tolerations
 ```
+#### Lab 10: Node Affinity
+See details of this lab via [Node Affinity](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab10-NodeAffinity.md)
+```bash
+$ kubectl get nodes node01 --show-labels
+$ kubectl label nodes node01 color=blue
+$ kubectl get deployments.apps blue -o yaml > blue.yaml
+$ vi blue.yaml
+$ kubectl delete deployments.apps blue
+$ kubectl apply -f blue.yaml
+```
