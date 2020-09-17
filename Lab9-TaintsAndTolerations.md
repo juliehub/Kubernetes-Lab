@@ -34,6 +34,11 @@ master $ kubectl get pods
 NAME       READY   STATUS    RESTARTS   AGE
 mosquito   0/1     Pending   0          8s
 ```
+
+or
+```bash
+$ kubectl run mosquito --image=nginx --restart=Never
+```
 5. Why do you think the pod is in a pending state?
 POD `mosquito` cannot tolerate taint Mortein
 
@@ -68,6 +73,11 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
   Normal  Pulled     2m36s  kubelet, node01    Successfully pulled image "nginx"
   Normal  Created    2m35s  kubelet, node01    Created container bee
   Normal  Started    2m35s  kubelet, node01    Started container bee
+```
+or
+```bash
+$ kubectl run bee --image=nginx --restart=Never --dry-run -o yaml > bee.yaml
+$ kubectl explain pod --recursive | grep -A5 tolerations
 ```
 7. Do you see any taints on master node?
 ```bash
