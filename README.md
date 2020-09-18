@@ -165,3 +165,7 @@ $ kubectl apply -f blue.yaml
 See details of this lab via [Resource Limit](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab11-ResourceLimit.md)
 #### Lab 12: Daemon Sets
 See details of this lab via [DaemonSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab12-DaemonsSets.md)
+#### Lab 13: Static Pods
+See details of this lab via [StaticPods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab13-StaticPods.md)
+#### Lab 14: Daemon Sets
+See details of this lab via [Schedulers](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab14-Schedulers.md)
