@@ -171,3 +171,5 @@ See details of this lab via [StaticPods](https://github.com/juliehub/Kubernetes-
 See details of this lab via [Schedulers](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab14-Schedulers.md)
 #### Lab 15: Monitoring
 See details of this lab via [Monitoring](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab15-Monitoring.md)
+#### Lab 16: Logging
+See details of this lab via [Logging](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab16-Logging.md)
