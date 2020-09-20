@@ -5,7 +5,7 @@
 - [other tips](https://github.com/juliehub/Kubernetes-Lab/blob/master/Tips.md)
 ## Basics
 #### Lab 1: PODs
-See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab1-Pods.md)
+See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab1-Pods.md)
 ##### Important Commands for lab 1:
   - Download [pod-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/pod-definition.yaml)
   - Run commands:
@@ -21,7 +21,7 @@ See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/bl
   $ kubectl edit pod redis
   ```
 #### Lab 2: ReplicaSet
-See details of this lab via [ReplicaSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab2-ReplicaSets.md)
+See details of this lab via [ReplicaSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab2-ReplicaSets.md)
 ##### Important Commands for lab 2:
   - Download [replicaset-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/replicaset-definition.yaml) and [compute-quota.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/compute-quota.yaml)
   - Run commands:
@@ -39,7 +39,7 @@ See details of this lab via [ReplicaSets](https://github.com/juliehub/Kubernetes
   $ kubectl scale --replicas=6 replicaset myapp-replicaset
   ```
 #### Lab 3: Deployments
-See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab3-Deployments.md)
+See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab3-Deployments.md)
 ##### Important Commands for lab 3:
   - Download [deployment-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/deployment-definition.yaml)
   - Run commands:
@@ -70,7 +70,7 @@ See details of this lab via [Deployments](https://github.com/juliehub/Kubernetes
 - Save it to a file, make necessary changes to the file (for example, adding more replicas) and then create the deployment.
 
 #### Lab 4: NameSpaces
-See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab4-NameSpaces.md)
+See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab4-NameSpaces.md)
 ##### Important Commands for lab 4:
 - Download [namespace-dev.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/namespace-dev.yaml)
 - Run commands:
@@ -94,7 +94,7 @@ See details of this lab via [Namespaces](https://github.com/juliehub/Kubernetes-
 $ kubectl create -f compute-quota.yml
 ```
 #### Lab 5: Services
-See details of this lab via [Services](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab5-Services.md)
+See details of this lab via [Services](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab5-Services.md)
 ##### Important Commands for lab 5:
 - Download [service-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-definition.yaml)
 - Download [service-clusterIP-definition.yaml](https://github.com/juliehub/Kubernetes-Lab/blob/master/service-clusterIP-definition.yaml)
@@ -109,7 +109,7 @@ $ kubectl apply -f svc.yaml
 ```
 - Access the Node port using `curl http://192.168.1.2:30008`
 #### Lab 6: Imperative Commands
-See details of this lab via [Imperative_Commands](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab6-ImperativeCommands.md)
+See details of this lab via [Imperative_Commands](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab6-ImperativeCommands.md)
 ##### Important Commands for lab 6:
 - Imperative Commands
 ```bash
@@ -131,16 +131,16 @@ $ kubectl apply -f nginx.yaml
 $ kubectl apply -f /path/to
 ```
 #### Lab 7: Manual Scheduling
-See details of this lab via [Manual Scheduling](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab7-ManualScheduling.md)
+See details of this lab via [Manual Scheduling](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab7-ManualScheduling.md)
 
 #### Lab 8: Labels and Selectors
-See details of this lab via [Labels](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab8-Labels.md)
+See details of this lab via [Labels](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab8-Labels.md)
 ```bash
 $kubectl get pods --show-labels
 $kubectl get pods -l env=dev --no-headers | wc -l
 ```
 #### Lab 9: Taints and Tolerations
-See details of this lab via [Taints And Tolerations](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab9-TaintsAndTolerations.md)
+See details of this lab via [Taints And Tolerations](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab9-TaintsAndTolerations.md)
 ```bash
 $ kubectl taint nodes node01 spray=mortein:NoSchedule
 $ kubectl describe node node01 |grep Taints
@@ -152,7 +152,7 @@ Grep 5 lines underneath "tolerations"
 $ kubectl explain pod --recursive | grep -A5 tolerations
 ```
 #### Lab 10: Node Affinity
-See details of this lab via [Node Affinity](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab10-NodeAffinity.md)
+See details of this lab via [Node Affinity](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab10-NodeAffinity.md)
 ```bash
 $ kubectl get nodes node01 --show-labels
 $ kubectl label nodes node01 color=blue
@@ -162,14 +162,14 @@ $ kubectl delete deployments.apps blue
 $ kubectl apply -f blue.yaml
 ```
 #### Lab 11: Resource Limit
-See details of this lab via [Resource Limit](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab11-ResourceLimit.md)
+See details of this lab via [Resource Limit](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab11-ResourceLimit.md)
 #### Lab 12: Daemon Sets
-See details of this lab via [DaemonSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab12-DaemonsSets.md)
+See details of this lab via [DaemonSets](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab12-DaemonsSets.md)
 #### Lab 13: Static Pods
-See details of this lab via [StaticPods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab13-StaticPods.md)
+See details of this lab via [StaticPods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab13-StaticPods.md)
 #### Lab 14: Daemon Sets
-See details of this lab via [Schedulers](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab14-Schedulers.md)
+See details of this lab via [Schedulers](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab14-Schedulers.md)
 #### Lab 15: Monitoring
-See details of this lab via [Monitoring](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab15-Monitoring.md)
+See details of this lab via [Monitoring](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab15-Monitoring.md)
 #### Lab 16: Logging
-See details of this lab via [Logging](https://github.com/juliehub/Kubernetes-Lab/blob/master/Lab16-Logging.md)
+See details of this lab via [Logging](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab16-Logging.md)
