@@ -173,3 +173,11 @@ See details of this lab via [Schedulers](https://github.com/juliehub/Kubernetes-
 See details of this lab via [Monitoring](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab15-Monitoring.md)
 #### Lab 16: Logging
 See details of this lab via [Logging](https://github.com/juliehub/Kubernetes-Lab/blob/master/Scheduling-Logging/Lab16-Logging.md)
+#### Lab 17: Rolling Updates
+See details of this lab via [Rolling Updates](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/RollingUpdates.md)
+#### Lab 18: Commands And Arguments
+See details of this lab via [Commands And Arguments](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/CommandsAndArguments.md)
+#### Lab 19: Environment Variables
+See details of this lab via [Environment Variables](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/EnvironmentVariables.md)
+#### Lab 20: Secrets
+See details of this lab via [Screts](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/TestSecrets.md)
