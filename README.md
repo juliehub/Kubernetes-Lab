@@ -181,3 +181,13 @@ See details of this lab via [Commands And Arguments](https://github.com/juliehub
 See details of this lab via [Environment Variables](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/EnvironmentVariables.md)
 #### Lab 20: Secrets
 See details of this lab via [Screts](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/TestSecrets.md)
+#### Lab 21: Multi-Container Pods
+See details of this lab via [Multi-Container Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/MultiplePods.md)
+#### Lab 22: Init Containers
+See details of this lab via [Init Containers](https://github.com/juliehub/Kubernetes-Lab/blob/master/ApplicationLifeCycles/InitContainers.md)
+#### Lab 23: OS Upgrades
+See details of this lab via [OS Upgrades](https://github.com/juliehub/Kubernetes-Lab/blob/master/Clusters/OSUpgrade.md)
+#### Lab 24: Cluster Upgrades
+See details of this lab via [Cluster Upgrades](https://github.com/juliehub/Kubernetes-Lab/blob/master/Clusters/ClusterUpgrade.md)
+#### Lab 25: Backup and Restore
+See details of this lab via [Backup and Restore](https://github.com/juliehub/Kubernetes-Lab/blob/master/Clusters/BackupRestore.md)
