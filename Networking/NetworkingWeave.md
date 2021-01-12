@@ -6,7 +6,8 @@ controlplane $ kubectl get nodes
 NAME           STATUS   ROLES    AGE     VERSION
 controlplane   Ready    master   4m6s    v1.19.0
 node01         Ready    <none>   3m35s   v1.19.0
-node02         Ready    <none>   3m36s   v1.19.0node03         Ready    <none>   3m36s   v1.19.0
+node02         Ready    <none>   3m36s   v1.19.0
+node03         Ready    <none>   3m36s   v1.19.0
 ```
 2. What is the Networking Solution used by this cluster? `weeve`
 ```bash
