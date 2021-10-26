@@ -3,6 +3,7 @@
 - [kubectl CheatSheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/)
 - [other tips](https://github.com/juliehub/Kubernetes-Lab/blob/master/Tips.md)
+- [basic GCP](https://github.com/juliehub/Kubernetes-Lab/blob/master/basicGCP.md)
 ## Basics
 #### Lab 1: PODs
 See details of this lab via [Pods](https://github.com/juliehub/Kubernetes-Lab/blob/master/Basics/Lab1-Pods.md)
